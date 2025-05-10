@@ -34,9 +34,10 @@ Home Page
             <td>{{ $row->Desgination }}</td>
             <td>{{ $row->Address }}</td>
             <td>
- <button type="button" class="btn btn-success text-white btn-sm">Edit</button></a>
-<button type="button" class="btn btn-danger text-white btn-sm ms-2">Delete</button></a>
-            </td>
+  <a href='{{URL("/edit-data/".$row->id)}}'><button type="button" class="btn btn-success text-white btn-sm">Edit</button></a>
+  <a href='{{URL("/read-data/".$row->id)}}'><button type="button" class="btn btn-info text-white btn-sm ms-2">Read</button>
+ <a href='{{URL("/".$row->id)}}'><button type="button" class="btn btn-danger text-white btn-sm ms-2">Delete</button></a>
+             </td>
         </tr>
         @endforeach
 </table>
